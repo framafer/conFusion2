@@ -1,4 +1,12 @@
 import { Component } from '@angular/core';
+
+import { AboutPage } from 'src/app/about/about.page';
+import { MenuPage } from 'src/app/menu/menu.page';
+import { ContactPage } from 'src/app/contact/contact.page'; 
+import { HomePage } from 'src/app/home/home.page';
+
+
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -6,12 +14,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/spam', icon: 'warning' },
+    { title: 'Home', icon: 'home', url: '/folder/home', component: HomePage },
+    { title: 'About Us', icon: 'information-circle', url: '/folder/about', component: AboutPage },
+    { title: 'Menu', icon: 'Menu', url: '/folder/menu', component: MenuPage },
+    { title: 'Contact Us', icon: 'paper-plane', url: '/folder/contact', component: ContactPage },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
